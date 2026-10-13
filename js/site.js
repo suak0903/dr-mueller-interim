@@ -79,8 +79,12 @@
         history.replaceState(null, '', f === 'alle' ? location.pathname : '#' + f);
       });
     });
-    var h = location.hash.slice(1);
-    if (h && document.querySelector('.filters button[data-f="' + h + '"]')) setze(h);
+    var ausAdresse = function () {
+      var h = location.hash.slice(1);
+      setze(h && document.querySelector('.filters button[data-f="' + h + '"]') ? h : 'alle');
+    };
+    ausAdresse();
+    window.addEventListener('hashchange', ausAdresse);
   }
 
   // Kontaktformular: baut die Mail im E-Mail-Programm, bis ein Formular-Endpunkt angebunden ist
