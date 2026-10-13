@@ -465,7 +465,6 @@ section{scroll-margin-top:calc(var(--nav-h) + 10px)}
   .book img{max-width:260px;box-shadow:14px 14px 0 var(--wine)}
   .subhero__grid{grid-template-columns:1fr;gap:34px}
   .subhero__aside img{width:150px;box-shadow:12px 12px 0 var(--wine)}
-  .book--impulse > a:first-child{display:none}
 }
 @media (max-width:420px){ .brand img{height:38px} .mfacts{grid-template-columns:1fr} }
 @media (prefers-reduced-motion:reduce){
