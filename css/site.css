@@ -62,7 +62,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 10px)}
 .nav__links a.nav__cta{padding:13px 24px;background:var(--wine);color:#fff}
 .nav__links a.nav__cta::after{display:none}
 .nav__links a.nav__cta:hover{background:var(--wine-2)}
-.nav.scrolled{background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
+.nav.scrolled{background:var(--white);box-shadow:0 1px 0 var(--line)}
 .nav.scrolled .logo-hell{display:none} .nav.scrolled .logo-dunkel{display:block}
 .nav.scrolled .nav__links a{color:var(--slate)}
 .nav.scrolled .nav__links a.nav__cta{color:#fff}
@@ -129,11 +129,11 @@ section{scroll-margin-top:calc(var(--nav-h) + 10px)}
 .subhero .tags{margin-top:26px}
 
 /* Kennzahlen */
-.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
-.kpi{padding:30px 28px 0 0;border-right:1px solid var(--line);margin-right:28px}
-.kpi:last-child{border-right:0;margin-right:0}
-.kpi b{display:block;font:300 clamp(44px,5vw,66px)/1 var(--display);color:var(--wine);letter-spacing:-.02em}
-.kpi span{display:block;margin-top:14px;color:var(--muted);font-size:15px;line-height:1.5}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kpi{padding:34px 32px 32px;border-left:1px solid var(--line)}
+.kpi:first-child{border-left:0;padding-left:0}
+.kpi b{display:block;font:300 clamp(46px,4.6vw,64px)/1 var(--display);color:var(--wine);letter-spacing:-.02em;white-space:nowrap}
+.kpi span{display:block;margin-top:16px;color:var(--muted);font-size:15px;line-height:1.5;max-width:240px}
 .kpis-note{margin:30px 0 0;font-size:13px;color:var(--muted)}
 
 /* Leistungskarten */
@@ -408,7 +408,9 @@ section{scroll-margin-top:calc(var(--nav-h) + 10px)}
   .split--rev .figure{order:-1}
   .lgrid,.mcards,.bcards,.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kpis,.tech,.inv{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .kpi{margin-right:0;padding-right:20px;padding-bottom:26px;border-right:0}
+  .kpi{padding:28px 24px 28px 0;border-left:0}
+  .kpi:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
+  .kpi:nth-child(n+3){border-top:1px solid var(--line)}
   .tech div,.inv div{padding-bottom:20px}
   .mcols{grid-template-columns:1fr;gap:40px}
   .vsteps{grid-template-columns:1fr}
@@ -433,7 +435,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 10px)}
   .twin{gap:40px}
   .lcard{min-height:0}
   .lnav{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .kpis{grid-template-columns:1fr} .kpi{padding:22px 0 0;border-top:0}
+  .kpis{grid-template-columns:1fr} .kpi,.kpi:nth-child(even){padding:22px 0;border-left:0} .kpi + .kpi{border-top:1px solid var(--line)}
   .tl::before{left:6px}
   .tl > li{grid-template-columns:1fr}
   .tl > li::after{left:1px;top:8px}
